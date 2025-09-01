@@ -107,6 +107,7 @@ fun AddItemDialog(onAdd: (ShoppingItem) -> Unit) {
         confirmButton = { Button(onClick = { onAdd(ShoppingItem(name, qty)) }) }
     )
 }
+```
 
 ---
 
