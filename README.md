@@ -82,8 +82,6 @@ ShoppingListApp/
 
 ## 🖼️ Screenshots / Preview
 
-> Replace the images in `/screenshots` with real screenshots or GIFs before sharing.
-
 | Home                           | Add Item                          | Edit Item                           |
 | ------------------------------ | --------------------------------- | ----------------------------------- |
 | ![Home](/home.jpg) | ![Add](/add-item.jpg) | ![Edit](/edit.jpg) |
