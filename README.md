@@ -86,7 +86,7 @@ ShoppingListApp/
 
 | Home                           | Add Item                          | Edit Item                           |
 | ------------------------------ | --------------------------------- | ----------------------------------- |
-| ![Home](/screenshots/home.png) | ![Add](/screenshots/add_item.png) | ![Edit](/screenshots/edit_item.png) |
+| ![Home](/home.jpg) | ![Add](/add-item.jpg) | ![Edit](/edit.jpg) |
 
 ---
 
