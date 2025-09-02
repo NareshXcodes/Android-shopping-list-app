@@ -197,16 +197,18 @@ fun ShoppingItemEditor(item: ShoppingItem, onEditComplete: (String, Int) -> Unit
                     .fillMaxWidth()
                     .padding(bottom = 6.dp)
             )
+
+            Button(
+                onClick = {
+                    isEditing = false
+                    onEditComplete(editedName, editedQuantity.toIntOrNull() ?: 1)
+                },
+                shape = RoundedCornerShape(12.dp)
+            ) {
+                Text(text = "Save")
+            }
         }
-        Button(
-            onClick = {
-                isEditing = false
-                onEditComplete(editedName, editedQuantity.toIntOrNull() ?: 1)
-            },
-            shape = RoundedCornerShape(12.dp)
-        ) {
-            Text(text = "Save")
-        }
+
     }
 }
 
@@ -229,7 +231,6 @@ fun ShoppingListItem(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Row {
             Text(
                 text = "Item: ${item.name}",
                 style = MaterialTheme.typography.bodyLarge,
@@ -249,6 +250,5 @@ fun ShoppingListItem(
             IconButton(onClick = onDeleteClick) {
                 Icon(imageVector = Icons.Default.Delete, contentDescription = null, tint = Color.Red)
             }
-        }
     }
 }
