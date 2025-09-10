@@ -6,6 +6,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -40,7 +41,7 @@ data class ShoppingItem(
 )
 
 @Composable
-fun ShoppingListApp() {
+fun ShoppingListApp(modifier: Modifier = Modifier) {
     var sItems by remember { mutableStateOf(listOf<ShoppingItem>()) }
     var showDialog by remember { mutableStateOf(false) }
     var itemName by remember { mutableStateOf("") }
@@ -231,24 +232,28 @@ fun ShoppingListItem(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
+        Column(modifier = Modifier.fillMaxHeight()){
             Text(
                 text = "Item: ${item.name}",
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurface,
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier.padding(4.dp)
             )
             Text(
                 text = "Qty: ${item.quantity}",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.secondary,
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier.padding(4.dp)
             )
+        }
 
+        Column(modifier = Modifier.fillMaxHeight()) {
             IconButton(onClick = onEditClick) {
-                Icon(imageVector = Icons.Default.Edit, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
+                Icon(imageVector = Icons.Default.Edit, contentDescription = null, tint = Color.Green)
             }
             IconButton(onClick = onDeleteClick) {
                 Icon(imageVector = Icons.Default.Delete, contentDescription = null, tint = Color.Red)
             }
+        }
     }
 }

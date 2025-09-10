@@ -31,7 +31,9 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     modifier = Modifier.fillMaxSize().padding(vertical = 26.dp)
                 ) { paddingValues ->
-                    ShoppingListApp()
+                    ShoppingListApp(
+                        modifier = Modifier.padding(paddingValues)
+                    )
                 }
             }
         }
