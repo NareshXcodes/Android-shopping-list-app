@@ -48,7 +48,7 @@ fun ShoppingListApp(modifier: Modifier = Modifier) {
     var itemQuantity by remember { mutableStateOf("") }
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
             .padding(horizontal = 16.dp, vertical = 10.dp)
